@@ -11,3 +11,58 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.container {
+  margin: 20px auto;
+  h1{
+    text-align: left;
+    color: white;
+    // background-color: white;
+    padding: 20px;
+  }
+}
+
+.card-category{
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 5px rgb(58, 58, 58);
+  padding: 5px 15px;
+  .top-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    .card-remove-link{
+      transform: rotate(-45deg);
+      text-decoration: none;
+      font-size: 40px;
+      color: rgb(58, 58, 58);
+      font-weight:lighter;
+    }
+  }
+}
+
+.card-movies{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  padding: 15px;
+
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .card-movies-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bolder;
+  }
+
+  .card-movies-infos{
+    padding: 0px 15px;
+  }
+}

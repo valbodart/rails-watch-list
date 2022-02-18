@@ -1,0 +1,11 @@
+<div class="container p-3 mb-2 bg-dark.bg-gradient">
+  <h1>Add a new movie</h1>
+<div class="simple-form">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.input :comment %>
+      <%= f.association :movie %>
+      <%= f.submit :submit %>
+    <% end %>
+</div>
+<p><%= link_to 'My lists', lists_path %></p>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+<h1>My watchlist</h1>
+
+  <div class="row mt-5">
+
+    <% @lists.each do |list| %>
+      <div class="col-4">
+        <div class="card-category">
+
+          <div class="top-list">
+            <h4><%= list.name %></h4>
+            <%= link_to "+", list_path(list), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+          </div>
+
+              <% list.movies.each do |movie| %>
+                <div class="card-movies">
+                  <img src="<%=movie.poster_url%>"/>
+                  <div class="card-movies-infos">
+                    <div class='card-movies-top'>
+                      <p><%= movie.title %></p>
+                      <p><%= "#{movie.rating} ⭐️" %></p>
+                    </div>
+                    <div class="card-movies-overview">
+                      <%= movie.overview %>
+                    </div>
+                  </div>
+                </div>
+                <br>
+              <% end %>
+
+
+            <%= link_to 'Add a movie', new_list_bookmark_path(list) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
