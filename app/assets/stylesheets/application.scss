@@ -14,33 +14,57 @@
 
 .container {
   margin: 20px auto;
-  h1{
-    text-align: left;
-    color: white;
-    // background-color: white;
-    padding: 20px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  .top{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    h1{
+      text-align: left;
+      color: white;
+      // background-color: white;
+      padding: 20px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
   }
 }
 
 .card-category{
   background-color: whitesmoke;
   box-shadow: 5px 5px 5px rgb(58, 58, 58);
-  padding: 5px 15px;
-  .banner{
+  padding: 15px 15px 15px;
+  // overflow: hidden;
+  position: relative;
+
+  .top-card{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    .card-remove-link{
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 100px;
+
+      h4 {
+        padding: 15px;
+        color: white;
+      }
+
+    .card-remove-link {
+      padding: 15px;
       transform: rotate(-45deg);
-      text-decoration: none;
-      font-size: 40px;
-      color: rgb(58, 58, 58);
-      font-weight:lighter;
+      a{
+        text-decoration: none;
+        font-size: 40px;
+        color: white;
+        font-weight:lighter;
+      }
     }
   }
 }
+
 
 .card-movies{
   display: flex;
