@@ -6,19 +6,13 @@
     <% @lists.each do |list| %>
       <div class="col-4">
         <div class="card-category">
-
-          <div class="top-list">
-            <%= cl_image_tag('gefxs6hulre42mgan2g7', width: 400, height: 300, crop: :fill) %>
-            <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
-  </div>
-</div>
+          <div class="top-card">
+            <%= cl_image_tag('gefxs6hulre42mgan2g7')%>
             <h4><%= list.name %></h4>
             <%= link_to "+", list_path(list), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
-          </div>
+            </div>
+
+
 
               <% list.movies.each do |movie| %>
                 <div class="card-movies">
